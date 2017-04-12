@@ -23,7 +23,7 @@ public class HouseExtension: Extension, DynamicCategoryController {
     /// Create an instance of a House Extension.
     ///
     /// - Parameter identifier: The House Identifier of the House Extension.
-    init(_ identifier: HouseIdentifier) {
+    public init(_ identifier: HouseIdentifier) {
         self.identifier = identifier
     }
     

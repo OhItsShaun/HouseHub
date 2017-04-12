@@ -17,7 +17,7 @@ public struct Events {
     /// - Parameters:
     ///   - device: The House Extension that contains the charactersitic value that changed.
     ///   - characteristic: The characterstic whose value has changed.
-    func characteristicValueDidChange(in device: Extension, for characteristic: Characteristic) {
+    public func characteristicValueDidChange(in device: Extension, for characteristic: Characteristic) {
         Log.debug("Event did occur in: \(device) for characteristic: \(characteristic)", in: .events)
         
         let deviceRoom = House.rooms.findRoom(with: device)

@@ -34,7 +34,7 @@ extension Extensions: Sequence {
     
 }
 
-extension Extensions {
+public extension Extensions {
     
     public mutating func addExtension(_ member: Extension) {
         self.lock.sync {
@@ -57,7 +57,7 @@ extension Extensions {
     
 }
 
-extension Extensions {
+public extension Extensions {
   
     public mutating func removeAll() {
         for device in self {

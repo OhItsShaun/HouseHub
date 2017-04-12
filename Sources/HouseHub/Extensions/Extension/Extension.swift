@@ -51,7 +51,7 @@ public protocol Extension: CustomStringConvertible {
     
 }
 
-extension Extension {
+public extension Extension {
     
     /// A type with a customised textual representation.
     public var description: String {

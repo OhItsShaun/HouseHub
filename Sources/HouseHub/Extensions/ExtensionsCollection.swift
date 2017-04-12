@@ -30,7 +30,7 @@ public protocol ExtensionsCollection: Sequence {
 
 }
 
-extension ExtensionsCollection where Self.Iterator.Element == Extension {
+public extension ExtensionsCollection where Self.Iterator.Element == Extension {
 
     /// Find and return a House Extension in the collection that has the given House Identifier.
     ///

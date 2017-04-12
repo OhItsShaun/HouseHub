@@ -23,7 +23,7 @@ public struct Rooms {
     fileprivate var notification = DispatchQueue(label: "Notification", qos: .utility, attributes: .concurrent)
 }
 
-extension Rooms {
+public extension Rooms {
     
     /// Find the room that contains a give House Extension.
     ///
@@ -49,7 +49,7 @@ extension Rooms {
     
 }
 
-extension Rooms {
+public extension Rooms {
     
     /// Add a room.
     ///
@@ -70,7 +70,7 @@ extension Rooms {
     
 }
 
-extension Rooms {
+public extension Rooms {
     
     /// Remove all rooms.
     mutating func removeAll() {

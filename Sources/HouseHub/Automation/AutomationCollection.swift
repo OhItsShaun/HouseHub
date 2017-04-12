@@ -23,10 +23,22 @@ public struct AutomationCollection {
     
     /// The last time automations were checked to perform.
     fileprivate var lastSweep: TimeInterval = 0
+    
+    /// Create a new automation collection.
+    /// Automations are fired at the start of every minute automatically.
+    public init() {
+        guard #available(OSX 10.12, *) else {
+            fatalError("Unsupported version of OSX. Please compile for OSX 10.12.")
+        }
+        let timer = Timer(fire: Date.roundedToMinute(), interval: 60, repeats: true) { _ in
+            House.automation.performTimeDueAutomations()
+        }
+        RunLoop.main.add(timer, forMode: .defaultRunLoopMode)
+    }
 }
 
 // MARK: - AutomationCollection automations
-extension AutomationCollection {
+public extension AutomationCollection {
     
     /// Execute automations that are due to be performed.
     public mutating func performTimeDueAutomations() {
@@ -81,7 +93,7 @@ extension AutomationCollection {
 }
 
 // MARK: - Updating automations
-extension AutomationCollection {
+public extension AutomationCollection {
     
     /// Add an automation to the collection.
     ///

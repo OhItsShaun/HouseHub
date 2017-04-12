@@ -21,7 +21,7 @@ public struct FixedAutomation: Automation {
     /// - Parameters:
     ///   - label: The name of the rule.
     ///   - actionBlock: The closure to perform when the rule is requested to perform.
-    init(_ label: String, perform actionBlock: @escaping () -> ()) {
+    public init(_ label: String, perform actionBlock: @escaping () -> ()) {
         self.label = label
         self.actionBlock = actionBlock
     }

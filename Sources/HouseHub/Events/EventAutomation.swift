@@ -77,7 +77,7 @@ public struct EventAutomation: Automation {
     
 }
 
-extension EventAutomation {
+public extension EventAutomation {
     
     public func handleEvent(from device: Extension, forCharacteristicChange characteristic: Characteristic, inRoom roomName: String? = nil) {
         guard characteristic == self.characteristic else {

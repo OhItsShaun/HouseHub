@@ -43,7 +43,7 @@ public struct DailyAutomation: TimeAutomation {
     ///   - time: The time at which the automation should perform.
     ///   - onDays: The days of the week the rule should perform.  
     ///   - actionBlock: The closure to perform when the rule is requested to perform.
-    init(_ label: String, at time: TimeRepresentable, only onDays: Set<Weekday> = Set<Weekday>(Weekday.all()), perform actionBlock: @escaping () -> ()) {
+    public init(_ label: String, at time: TimeRepresentable, only onDays: Set<Weekday> = Set<Weekday>(Weekday.all()), perform actionBlock: @escaping () -> ()) {
         self.label = label
         self.time = time
         self.performsOnDays = onDays

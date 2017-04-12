@@ -12,7 +12,7 @@ import HouseCore
 /// A House Extension representation to the House Hub that conforms to to `DynamicCategoryController` inform House Hub
 /// logic the House Extension support categories that are a subset of the House Categories protocol their type conforms to,
 /// and the categories can change during runtime.
-protocol DynamicCategoryController {
+public protocol DynamicCategoryController {
 
     /// Determine whether the House Extension supports a given category.
     ///
