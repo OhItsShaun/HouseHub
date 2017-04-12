@@ -13,7 +13,7 @@ public extension HouseNetwork {
     
     public func open() {
         HouseHubServices.registerAll()
-        HouseNetwork.current().open(as: .houseHub)
+        HouseNetwork.current().start()
         HouseNetwork.current().responseDelegate = HandshakeHandler()
     }
     
