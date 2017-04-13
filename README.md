@@ -1,4 +1,4 @@
-# House
+# House Hub
 
 A home automation platform written entirely in Swift. The House platform is made of two parts:
 
@@ -25,7 +25,7 @@ Prior to compilation ensure:
 * A `kqueue` ABI for GCD. `sudo apt-get install libkqueue-dev` is recommended.
 * All dependencies of Swift are installed. A full list of Swift dependencies can be found on [Swift's GitHub](https://github.com/apple/swift#system-requirements). 
 
-####(x86)
+#### (x86)
 
 * [Swift 3.0 or later](https://swift.org/download/)
 * Ubuntu 16.04
@@ -189,7 +189,7 @@ class HouseDelegate: UpdateableProcess, LightControllerDelegate {
 
 Once you have a House Extensions running on the network the above is all the code you need to deploy an automations. The Hub SDK will handle all the networking and communication for you, and will call the appropraite autoamtions when necessary.
 
-## Building
+## Building
 
 ### Swift Package Manager (SPM)
 
